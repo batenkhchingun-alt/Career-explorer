@@ -1,2 +1,2 @@
-& 'C:\Program Files\Microsoft\jdk-17.0.21.102-hotspot\bin\javac.exe' -encoding UTF-8 CareerExplorer.java
-& 'C:\Program Files\Microsoft\jdk-17.0.21.102-hotspot\bin\java.exe' CareerExplorer
+& 'C:\Program Files\Microsoft\jdk-17.0.21.102-hotspot\bin\javac.exe' -encoding UTF-8 -d build CareerExplorer.java
+if ($LASTEXITCODE -eq 0) { & 'C:\Program Files\Microsoft\jdk-17.0.21.102-hotspot\bin\java.exe' -cp build CareerExplorer }
