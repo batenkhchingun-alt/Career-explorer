@@ -1,19 +1,19 @@
 # Career Explorer
 
-This is a small desktop app for trying out a career and job-search service. The app is still a beta, so some screens are examples and may not be finished.
+Career Explorer нь ажил хайгч болон ажил олгогчдод зориулсан туршилтын ширээний програм юм. Програм одоогоор хөгжүүлэлтийн шатандаа байгаа тул зарим хэсэг нь жишээ байдлаар ажиллана.
 
-## What you need
+## Шаардлагатай зүйлс
 
-- A Windows computer
-- Java Development Kit (JDK) 17 or newer
+- Windows үйлдлийн системтэй компьютер
+- Java Development Kit (JDK) 17 буюу түүнээс дээш хувилбар
 
-You need the **JDK**, not just Java, because the JDK includes the program that builds the app.
+Програмыг ажиллуулахын тулд зөвхөн Java биш, **JDK** суулгасан байх шаардлагатай. JDK-д програмыг хөрвүүлэх хэрэгсэл хамт ирдэг.
 
-## Start the app
+## Програмыг ажиллуулах
 
-1. Open the project folder in File Explorer.
-2. Click the folder address bar, type `powershell`, and press **Enter**.
-3. Copy and paste these commands into PowerShell, one at a time:
+1. File Explorer-оор төслийн хавтсыг нээнэ.
+2. Хавтасны зам харагдаж байгаа хаягийн мөрөн дээр дарж `powershell` гэж бичээд **Enter** дарна.
+3. Доорх командыг PowerShell цонхонд нэг нэгээр нь хуулж ажиллуулна:
 
    ```powershell
    New-Item -ItemType Directory -Force build | Out-Null
@@ -21,9 +21,9 @@ You need the **JDK**, not just Java, because the JDK includes the program that b
    if ($LASTEXITCODE -eq 0) { & 'C:\Program Files\Microsoft\jdk-17.0.21.102-hotspot\bin\java.exe' -cp build CareerExplorer }
    ```
 
-The app window should open. The first command makes a `build` folder. Compiled files go there, so they do not clutter the project folder.
+Програмын цонх нээгдэнэ. Эхний команд `build` нэртэй хавтас үүсгэж, хөрвүүлсэн файлуудыг тэнд хадгална. Ингэснээр төслийн үндсэн хавтас олон `.class` файлаар дүүрэхгүй.
 
-These commands use the JDK path installed on this computer. If your JDK is installed somewhere else, replace that path with your JDK's `bin` folder. If `javac` and `java` are already available in PowerShell, you can instead run:
+Дээрх команд нь энэ компьютерт JDK-г суулгасан замыг ашиглаж байна. JDK өөр хавтаст суусан бол команд доторх замыг өөрийн JDK-ийн `bin` хавтасны замаар солино. Харин PowerShell дээр `javac`, `java` команд шууд ажилладаг бол дараах командыг ашиглаж болно:
 
 ```powershell
 New-Item -ItemType Directory -Force build | Out-Null
@@ -31,18 +31,18 @@ javac -encoding UTF-8 -d build CareerExplorer.java
 if ($LASTEXITCODE -eq 0) { java -cp build CareerExplorer }
 ```
 
-## Try it out
+## Програмыг туршиж үзэх
 
-- Choose **Бүртгүүлэх** (Register) to create an account.
-- The login screen also has example buttons for trying the app as a job seeker or an organization.
-- The app interface is mostly in Mongolian.
+- **Бүртгүүлэх** товчийг дарж шинэ хэрэглэгчээр бүртгүүлнэ.
+- Нэвтрэх дэлгэц дээрх жишээ товчнуудаар ажил хайгч эсвэл байгууллагын эрхээр туршиж болно.
+- Програмын ихэнх цэс, тайлбар монгол хэлээр харагдана.
 
-## Your saved information
+## Хадгалсан мэдээлэл
 
-The app saves user information in `careerexplorer_users.dat` and photos in the `photos` folder, inside the project folder. Keep these files if you want to keep the saved information.
+Хэрэглэгчийн мэдээлэл төслийн хавтас дахь `careerexplorer_users.dat` файлд, хэрэглэгчийн зураг `photos` хавтаст хадгалагдана. Хадгалсан мэдээллээ алдахгүйн тулд эдгээр файлыг устгаж болохгүй.
 
-## If it does not start
+## Асуудал гарвал
 
-- If PowerShell says `javac` or `java` cannot be found, install JDK 17 or newer, or check the JDK path in the commands above.
-- If you see a compile error, make sure PowerShell is open in the folder containing `CareerExplorer.java`.
-- Close the app by closing its window.
+- PowerShell `javac` эсвэл `java` командыг олж чадахгүй байвал JDK 17 буюу түүнээс дээш хувилбар суулгасан эсэх, эсвэл команд дахь зам зөв эсэхийг шалгана.
+- Хөрвүүлэх үед алдаа гарвал PowerShell нээхдээ `CareerExplorer.java` файл байгаа төслийн хавтсанд орсон эсэхээ шалгана.
+- Програмыг хаахын тулд нээгдсэн цонхыг хаана.
